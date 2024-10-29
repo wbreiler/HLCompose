@@ -1,0 +1,9 @@
+services:
+  gogs:
+    container_name: gogs
+    image: gogs/gogs
+    ports:
+      - 8922:22
+      - 3000:3000
+    volumes:
+      - /your/path/here:/data

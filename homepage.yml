@@ -1,0 +1,16 @@
+services:
+  dashboard:
+    container_name: dashboard
+    image: ghcr.io/gethomepage/homepage
+    ports:
+      - 3000:3000
+      - 22:2222
+    volumes:
+      - /your/path/here:/app/public/icons
+      - /your/path/here:/app/public/images
+      - /your/path/here:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /drive1:/drive1
+      - /drive2:/drive2
+      - /drive3:/drive3
+      
