@@ -1,0 +1,7 @@
+services:
+  urbackup:
+    container_name: backup
+    image: binhex/arch-urbackup
+    network_mode: host
+    volumes:
+      - /your/path/here:/media

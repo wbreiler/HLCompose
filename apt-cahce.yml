@@ -1,0 +1,8 @@
+services:
+  apt-cache:
+    image: sameersbn/apt-cacher-ng
+    container_name: apt-cache
+    ports:
+      - 3142:3142
+    volumes:
+      - /your/path/here:/var/cache/apt-cache-ng

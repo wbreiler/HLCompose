@@ -1,0 +1,22 @@
+services:
+  authelia:
+    image: authelia/authelia
+    container_name: authelia
+    ports:
+      - 9091:9091
+    volumes:
+      - /your/path/here:/config
+    depends_on:
+      - redis
+    environment:
+      - TZ=America/Chicago
+  
+  redis:
+    image: redis:alpine
+    container_name: redis
+    volumes:
+      - /your/path/here:/data
+    ports:
+      - 6379:6379
+    environment:
+      - TZ=America/Chicago
