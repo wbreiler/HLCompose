@@ -6,7 +6,7 @@ This repository is intended to have a backup, so to speak, of all my containers 
 
 - Before using any of these Compose files, ensure you’ve checked that the specified ports are available and that directories are mapped correctly. After making sure the configuration(s) are correct, `cd` into the directory, then run `docker compose up -d`. Repeat for any additional services you want to run.
 
-- Both [Gogs](./gogs/docker-compose.yml) and [Homepage](./homepage/docker-compose.yml) want port `3000`. If you decide to run both, make sure you go in and change the port allocations for one or both of them.
+- [Gogs](./gogs/docker-compose.yml), [Homepage](./homepage/docker-compose.yml), and [Rocket.Chat](./rocketchat/docker-compose.yml) want port `3000`. If you decide to run more than, make sure you go in and change the port allocations for one or all of them.
 
 - You cannot run [LANCache](./lancache/docker-compose.yml) and [NGINX Proxy Manager](./nginxproxymanager/docker-compose.yml) on the same host, due to them both ~~wanting~~ needing ports `80` and `443`. If there's a way around this that I'm missing, submit a PR!
 

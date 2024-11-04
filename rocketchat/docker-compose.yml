@@ -1,0 +1,7 @@
+services:
+  rocketchat:
+    image: library/rocket.chat
+    ports:
+      - 3000:3000
+    volumes:
+      - ./data:/app/uploads
