@@ -1,0 +1,6 @@
+services:
+  scrypted:
+    image: koush/scrypted
+    network_mode: host
+    volumes:
+      - ./data:/server/volume
