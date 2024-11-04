@@ -1,0 +1,9 @@
+services:
+  pinchflat:
+    container_name: pinchflat
+    image: ghcr.io/kieraneglin/pinchflat
+    ports:
+      - 8945:8945
+    volumes:
+      - ./config:/config
+      - ./downloads:/downloads
