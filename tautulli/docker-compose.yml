@@ -5,4 +5,4 @@ services:
     ports:
       - 8181:8181
     volumes:
-      - /your/path/here:/config
+      - ./config:/config
