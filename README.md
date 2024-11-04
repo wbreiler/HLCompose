@@ -1,17 +1,17 @@
 # HomeLab Compose
 
-This repository is intended to have a backup, so to speak, of all my containers in an easy to read Docker Compose format. This includes containers that are running on unRAID, as I don't foresee myself running all of my containers on my unRAID host.
+This repository serves as a backup and central reference for all my Docker containers in a clear and organized Docker Compose format. It includes containers for my unRAID setup, as I don’t plan on running every container directly on unRAID in the future.
 
 ## NOTES
 
-- Before using any of these Compose files, ensure you’ve checked that the specified ports are available and that directories are mapped correctly. After making sure the configuration(s) are correct, `cd` into the directory, then run `docker compose up -d`. Repeat for any additional services you want to run.
+- Before using any of these Compose files, verify that the listed ports are free and that directory mappings are accurate. Once the configurations are set, navigate (`cd`) into the desired directory and run `docker compose up -d` to start the service. Repeat this process for any additional services you’d like to deploy.
 
-- [Gogs](./gogs/docker-compose.yml), [Homepage](./homepage/docker-compose.yml), and [Rocket.Chat](./rocketchat/docker-compose.yml) want port `3000`. If you decide to run more than, make sure you go in and change the port allocations for one or all of them.
+- [Gogs](./gogs/docker-compose.yml), [Homepage](./homepage/docker-compose.yml), and [Rocket.Chat](./rocketchat/docker-compose.yml) each default to port 3000. If running multiple of these services, make sure to update the port allocations for each to avoid conflicts.
 
-- You cannot run [LANCache](./lancache/docker-compose.yml) and [NGINX Proxy Manager](./nginxproxymanager/docker-compose.yml) on the same host, due to them both ~~wanting~~ needing ports `80` and `443`. If there's a way around this that I'm missing, submit a PR!
+- You cannot run [LANCache](./lancache/docker-compose.yml) and [NGINX Proxy Manager](./nginxproxymanager/docker-compose.yml) both require ports 80 and 443, which prevents them from being run simultaneously on the same host. If there’s a workaround you know of, feel free to submit a PR!
 
 - [LANCache](./lancache/docker-compose.yml) requires a .env file. I've attached the default .env file [here](./lancache/.lancache.env).
 
-- If you're planning on running a game server other than Minecraft, or you have mods/plugins that use other ports, via [Pufferpanel](./pufferpanel/docker-compose.yml), you will need to add the ports in the `docker-compose.yml` file.
+- If you’re planning to host a game server other than Minecraft, or if you’re using mods/plugins that require additional ports with [Pufferpanel](./pufferpanel/docker-compose.yml), be sure to add the necessary ports to the docker-compose.yml file.
 
 ## [TODO](./TODO.md)
