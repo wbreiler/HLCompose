@@ -1,0 +1,10 @@
+services:
+  pufferpanel:
+    container_name: pufferpanel
+    image: pufferpanel/pufferpanel
+    ports:
+      - 5657:5657
+      - 8080:8080
+      - 8123:8123
+      - 24454:24454
+      - 25565-25575:25565-25575

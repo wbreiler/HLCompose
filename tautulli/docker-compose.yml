@@ -1,8 +1,0 @@
-services:
-  tautulli:
-    image: lscr.io/linuxserver/tautulli
-    container_name: tautulli
-    ports:
-      - 8181:8181
-    volumes:
-      - ./config:/config
