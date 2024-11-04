@@ -5,7 +5,7 @@ services:
     ports:
       - 9091:9091
     volumes:
-      - /your/path/here:/config
+      - ./config:/config
     depends_on:
       - redis
     environment:
@@ -15,7 +15,7 @@ services:
     image: redis:alpine
     container_name: redis
     volumes:
-      - /your/path/here:/data
+      - ./db:/data
     ports:
       - 6379:6379
     environment:

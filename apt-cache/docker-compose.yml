@@ -5,4 +5,4 @@ services:
     ports:
       - 3142:3142
     volumes:
-      - /your/path/here:/var/cache/apt-cache-ng
+      - ./cache:/var/cache/apt-cache-ng

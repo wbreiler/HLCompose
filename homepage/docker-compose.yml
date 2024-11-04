@@ -6,9 +6,9 @@ services:
       - 3000:3000
       - 22:2222
     volumes:
-      - /your/path/here:/app/public/icons
-      - /your/path/here:/app/public/images
-      - /your/path/here:/app/config
+      - ./icons:/app/public/icons
+      - ./images:/app/public/images
+      - ./config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock
       - /drive1:/drive1
       - /drive2:/drive2
